@@ -2,3 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*.floating {
+  position: absolute;
+  background-color: #DDDDDD;
+  width: 80%;
+  left: 10%;
+}
+
+.floating > div {
+  margin: auto;
+}*/
