@@ -1,0 +1,30 @@
+title: Vitreousoul github.io Site
+author: vitreousoul
+description: >
+  This site is used as a portfolio. It has things that may interest you.
+
+exclude:
+  - README.md
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  -
+    scope:
+      path: "index.html"
+    values:
+      active_page: blog
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      page_type: post
+      active_page: blog
+      permalink: "/blog/:year/:month/:day/:title/"
+  -
+    scope:
+      path: "drawings"
+    values:
+      active_page: drawings

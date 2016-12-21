@@ -1,0 +1,12 @@
+<div id="main-nav-wrap">
+  <div id="main-nav" class="row">
+    <div>vitreousoul.github.io</div>
+    {% for nav_page in nav_pages %}
+      {% if nav_page.active_page == base_path %}
+        <div class="active"><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
+      {% else %}
+        <div class=""><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

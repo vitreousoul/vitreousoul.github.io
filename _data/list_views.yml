@@ -1,0 +1,7 @@
+posts:
+  site_target: posts
+  page_type: post
+
+drawings:
+  site_target: pages
+  page_type: drawing

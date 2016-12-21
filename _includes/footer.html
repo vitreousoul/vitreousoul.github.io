@@ -1,0 +1,28 @@
+{% assign github_logo = site.static_files | where: "basename","GitHub-Mark-32px" | first %}
+
+<div id="footer-wrap">
+  <div id="footer-content">
+
+    <div class="footer-block">
+      {% for nav_page in nav_pages %}
+
+        {% if nav_page.nav_index != 0 %}
+          <span>|</span>
+        {% endif %}
+
+        <a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a>
+
+      {% endfor %}
+    </div>
+
+    <br>
+
+    <div class="footer-block">
+      <a id="image-link" href="https://github.com/vitreousoul">
+        <img src="{{ site.github.url | append: github_logo.path }}" width="20" height="20" alt="github logo">
+        <div>vitreousoul</div>
+      </a>
+    </div>
+
+  </div>
+</div>

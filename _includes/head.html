@@ -1,0 +1,24 @@
+{% assign styleNames = page.styles | split: " " %}
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link rel="shortcut icon" href="{{ site.github.url }}/assets/images/favicon.ico">
+<link rel="stylesheet" href="{{ site.github.url }}/css/flexboxgrid.min.css">
+<link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
+
+{% if jekyll.environment != "production" %}
+  <link rel="stylesheet" href="{{ "/css/github-style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
+  <script src="{{ "/js/jquery.min.js" | relative_url }}" charset="utf-8"></script>
+{% else %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+{% endif %}
+
+{% for styleName in styleNames %}
+  {% assign stylePath = "/css/" | append: styleName | append: ".css" %}
+
+  <link rel="stylesheet" href="{{ site.github.url | append: stylePath }}">
+{% endfor %}

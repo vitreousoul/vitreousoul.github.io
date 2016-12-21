@@ -1,0 +1,38 @@
+---
+---
+
+{% comment %}
+  slice leading "/" from page.url, which prevents the first value returned
+  from split being ""
+{% endcomment %}
+{% assign base_path = page.url | slice: 1, page.url.size | split: "/" | first %}
+{% if base_path == nil %}
+  {% comment %} caveat because root directory acts as blog page {% endcomment %}
+  {% assign base_path = "blog" %}
+{% endif %}
+
+{% assign nav_pages = site.pages | where: "page_type", "nav_page"
+                                 | sort: "nav_index" %}
+
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} - vitreousoul.github.io</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include nav.html %}
+
+    <div id="main-content-wrap">
+      <div id="main-content">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="{{ site.github.url }}/js/base.js" charset="utf-8"></script>
+    {% include bodyScripts.html %}
+  </body>
+</html>

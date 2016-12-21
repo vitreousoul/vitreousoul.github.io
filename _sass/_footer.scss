@@ -1,0 +1,40 @@
+$footer-bg: #DED2C8;
+$footer-color: #7D7670;
+
+#footer-wrap {
+  padding: 1.2em 0.5em;
+  background-color: $footer-bg;
+  border-top: 1px solid #BBB;
+
+  * {
+    color: $footer-color;
+  }
+}
+
+#footer-content {
+  display: table;
+  margin: 0 auto;
+  max-width: $content-max-width;
+  font-size: 0.9rem;
+
+  .footer-block {
+    display: table-row;
+    text-align: center;
+
+    a {
+      padding: 0 1em;
+    }
+
+    #image-link {
+      display: table-cell;
+
+      img, div {
+        vertical-align: middle;
+      }
+    }
+
+    div {
+      display: inline-block;
+    }
+  }
+}

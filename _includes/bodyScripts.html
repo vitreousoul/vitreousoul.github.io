@@ -1,0 +1,7 @@
+{% assign scriptNames = page.scripts | split: " " %}
+
+{% for scriptName in scriptNames %}
+  {% assign scriptPath = "/js/" | append: scriptName | append: ".js" %}
+
+  <script src="{{ site.github.url | append: scriptPath }}" charset="utf-8"></script>
+{% endfor %}

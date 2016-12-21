@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+{% assign page_view = site.data.list_views[page.list_view_name] %}
+{% assign pages_list = site[page_view.site_target]
+                       | where: "page_type", page_view.page_type %}
+
+<h2>{{ page.title | capitalize }}</h2>
+
+<div class="list-view-link">
+  {% for page_item in pages_list %}
+
+    <h3>
+      <a href="{{ site.github.url | append: page_item.url }}">{{ page_item.title }}</a>
+    </h3>
+    <span>{{ page_item.date | date: "%b %m, %y" }}</span>
+    <span>{{ page_item.description }}</span>
+
+  {% endfor %}
+
+</div>
