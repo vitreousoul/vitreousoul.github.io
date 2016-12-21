@@ -6,8 +6,11 @@ description: >
 exclude:
   - README.md
 
-markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+
+# markdown: kramdown
+# highlighter: rouge
 
 defaults:
   -
