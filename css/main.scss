@@ -50,13 +50,15 @@ a {
 #main-nav {
   margin: 0 auto;
   max-width: $content-max-width;
-  height: $nav-height;
 
-  div, a {
+  .nav-section, a, div {
     color: $nav-accent;
     display: inline-block;
+    padding: 0 0.2em;
+  }
+
+  .nav-section:nth-child(2) {
     line-height: $nav-height;
-    padding: 0 0.5em;
   }
 
   .active {
@@ -102,5 +104,31 @@ a {
   span {
     display: block;
     margin: 0.1em 0;
+  }
+}
+
+@media (max-width: 750px) {
+  #main-nav {
+    .nav-section {
+      display: block;
+
+      .active {
+        background-color: #D0D0D0;
+      }
+    }
+
+    .nav-section:nth-child(1) {
+      padding: 0.5em 0;
+      text-align: center;
+    }
+
+    .nav-section:nth-child(2) {
+      line-height: $nav-height / 1.5;
+      background-color: #E0E0E0;
+
+      a {
+        color: $body-color;
+      }
+    }
   }
 }

@@ -1,12 +1,14 @@
 <div id="main-nav-wrap">
   <div id="main-nav">
-    <div>vitreousoul.github.io</div>
-    {% for nav_page in nav_pages %}
-      {% if nav_page.active_page == base_path %}
-        <div class="active"><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
-      {% else %}
-        <div class=""><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
-      {% endif %}
-    {% endfor %}
+    <div class="nav-section">vitreousoul.github.io</div>
+    <div id="main-nav-links" class="nav-section">
+      {% for nav_page in nav_pages %}
+        {% if nav_page.active_page == base_path %}
+          <div class="active"><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
+        {% else %}
+          <div class=""><a href="{{ nav_page.url | prepend: site.github.url }}">{{ nav_page.title }}</a></div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
