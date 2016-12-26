@@ -2,13 +2,12 @@
 
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 <link rel="shortcut icon" href="{{ site.github.url }}/assets/images/favicon.ico">
-<link rel="stylesheet" href="{{ site.github.url }}/css/flexboxgrid.min.css">
 <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
 
 {% if jekyll.environment != "production" %}
-  <link rel="stylesheet" href="{{ "/css/github-style.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/css/normalize.css" | relative_url }}">
-  <script src="{{ "/js/jquery.min.js" | relative_url }}" charset="utf-8"></script>
+  <link rel="stylesheet" href="{{ 'dev_assets/css/github-style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'dev_assets/css/normalize.css' | relative_url }}">
+  <script src="{{ 'dev_assets/js/jquery.min.js' | relative_url }}" charset="utf-8"></script>
 {% else %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <script
