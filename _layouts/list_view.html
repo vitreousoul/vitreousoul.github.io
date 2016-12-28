@@ -14,7 +14,7 @@ layout: base
     <h3>
       <a href="{{ site.github.url | append: page_item.url }}">{{ page_item.title }}</a>
     </h3>
-    <span>{{ page_item.date | date: "%b %m, %y" }}</span>
+    <span class="date">{{ page_item.date | date: "%b %m, %y" }}</span>
     <span>{{ page_item.description }}</span>
 
   {% endfor %}
