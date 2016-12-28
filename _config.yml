@@ -8,11 +8,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-kramdown:
-  input: GFM
-
-# markdown: kramdown
-# highlighter: rouge
+markdown: kramdown
+highlighter: rouge
 
 defaults:
   -
