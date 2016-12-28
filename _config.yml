@@ -5,6 +5,8 @@ description: >
 
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
 
 kramdown:
   input: GFM
