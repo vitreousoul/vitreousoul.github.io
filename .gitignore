@@ -4,3 +4,4 @@ _site
 dev_assets
 CNAME
 Gemfile.lock
+.log
