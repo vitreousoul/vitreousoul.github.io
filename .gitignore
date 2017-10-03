@@ -5,3 +5,4 @@ dev_assets
 CNAME
 Gemfile.lock
 .log
+.ipynb_checkpoints
